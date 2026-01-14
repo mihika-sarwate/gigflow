@@ -13,7 +13,7 @@ export const sendTokenResponse = (user, statusCode, res) => {
     ),
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
-    sameSite: 'lax'
+    sameSite: 'none' // allow cross-site cookie for Vercel frontend
   };
 
   res
